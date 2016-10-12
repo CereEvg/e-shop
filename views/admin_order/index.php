@@ -40,9 +40,9 @@
                             <td><?php echo $order['user_phone']; ?></td>
                             <td><?php echo $order['date']; ?></td>
                             <td><?php echo Order::getStatusText($order['status']); ?></td>
-                            <td><a href="/admin/order/view/<?php echo $order['id']; ?>" title="Смотреть"><button>View</button><i class="fa fa-eye"></i></a></td>
-                            <td><a href="/admin/order/update/<?php echo $order['id']; ?>" title="Редактировать"><button>Edit</button><i class="fa fa-pencil-square-o"></i></a></td>
-                            <td><a href="/admin/order/delete/<?php echo $order['id']; ?>" title="Удалить"><button>Delete</button><i class="fa fa-times"></i></a></td>
+                            <td><a href="/admin/order/view/<?php echo $order['id']; ?>" title="Смотреть"><button>Просмотр</button><i class="fa fa-eye"></i></a></td>
+                            <td><a href="/admin/order/update/<?php echo $order['id']; ?>" title="Редактировать"><button>Редактировать</button><i class="fa fa-pencil-square-o"></i></a></td>
+                            <td><a href="/admin/order/delete/<?php echo $order['id']; ?>" title="Удалить"><button>Удалить</button><i class="fa fa-times"></i></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

@@ -34,8 +34,8 @@
                         <td><?php echo $product['author']; ?></td>
                         <td><?php echo $product['title']; ?></td>
                         <td><?php echo $product['price']; ?></td>
-                        <td><a href="/admin/product/update/<?php echo $product['id']; ?>" title="Редактировать"><button>Edit</button><i class="fa fa-pencil-square-o"></i></a></td>
-                        <td><a href="/admin/product/delete/<?php echo $product['id']; ?>" title="Удалить"><button>Удаляй!<i class="fa fa-times"></i></button></a></td>
+                        <td><a href="/admin/product/update/<?php echo $product['id']; ?>" title="Редактировать"><button>Редактировать</button><i class="fa fa-pencil-square-o"></i></a></td>
+                        <td><a href="/admin/product/delete/<?php echo $product['id']; ?>" title="Удалить"><button>Удалить<i class="fa fa-times"></i></button></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

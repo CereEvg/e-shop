@@ -50,7 +50,6 @@
             <!-- End Products -->
         </div>
         <div class="cl">&nbsp;</div>
-        <?php echo $pagination->get(); ?>
         <!-- End Best-sellers -->
     </div>
     <!-- End Content -->

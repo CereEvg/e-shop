@@ -33,8 +33,8 @@
                             <td><?php echo $category['id']; ?></td>
                             <td><?php echo $category['name_category']; ?></td>
                             <td><?php echo $category['sort_order']; ?></td>
-                            <td><a href="/admin/category/update/<?php echo $category['id']; ?>" title="Редактировать"><button>Edit</button><i class="fa fa-pencil-square-o"></i></a></td>
-                            <td><a href="/admin/category/delete/<?php echo $category['id']; ?>" title="Удалить"><button>Delete</button><i class="fa fa-times"></i></a></td>
+                            <td><a href="/admin/category/update/<?php echo $category['id']; ?>" title="Редактировать"><button>Редактировать</button><i class="fa fa-pencil-square-o"></i></a></td>
+                            <td><a href="/admin/category/delete/<?php echo $category['id']; ?>" title="Удалить"><button>Удалить</button><i class="fa fa-times"></i></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

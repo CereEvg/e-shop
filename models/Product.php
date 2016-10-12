@@ -37,22 +37,17 @@ class Product
 
     /**
      * @param bool $categoryId
-     * @param $page
      * @return array
      */
-    public static function getProductListByCategory($categoryId = false, $page)
+    public static function getProductListByCategory($categoryId = false)
     {
         if ($categoryId || $categoryId == 0)
         {
-
-            $page = intval($page);
-            $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
-
             $db = Db::getConnection();
             $products = array();
 
             $sql = 'SELECT * FROM product WHERE status = "1" '
-                ."AND category_id =" .$categoryId . " ORDER BY id DESC LIMIT ".self::SHOW_BY_DEFAULT." OFFSET ".$offset;
+                ."AND category_id =" .$categoryId . " ORDER BY id DESC LIMIT ".self::SHOW_BY_DEFAULT;
 
 
             $result = $db->query($sql);

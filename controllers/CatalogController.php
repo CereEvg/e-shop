@@ -17,11 +17,9 @@ class CatalogController
         $categoryId = array_shift($categoryId);
 
         $categoryProducts = array();
-        $categoryProducts = Product::getProductListByCategory($categoryId, $page);
+        $categoryProducts = Product::getProductListByCategory($categoryId);
 
         $total = Product::getTotalProductsInCategory($categoryId);
-
-        $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT);
 
         $sliderProducts = Slider::getSlider();
 
