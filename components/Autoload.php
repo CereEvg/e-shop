@@ -1,5 +1,7 @@
 <?php
 
+
+// Реализация автозагрузки файлов
 function __autoload ($class_name)
 {
     $array_path = array(

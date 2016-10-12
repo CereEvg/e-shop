@@ -1,7 +1,13 @@
 <?php
 
+
+// Реализация корзины покупок
 class Cart
 {
+    /**
+     * @param $id
+     * @return int
+     */
     public static function addProduct($id)
     {
         $id = intval($id);
@@ -29,9 +35,13 @@ class Cart
         return self::countItems();
     }
 
-    // Количество товаро в сессии (в корзине)
+
+    /**
+     * @return int
+     */
     public static function countItems()
     {
+        // Количество товаров в сессии (в корзине)
         if (isset($_SESSION['products'])) {
             $count = 0;
             foreach ($_SESSION['products'] as $id => $quantity) {
@@ -44,6 +54,7 @@ class Cart
     }
 
 
+    // Получение списка товаров из сессии
     public static function getProducts()
     {
         if (isset($_SESSION['products'])) {
@@ -52,6 +63,11 @@ class Cart
         return false;
     }
 
+
+    /**
+     * @param $products
+     * @return int
+     */
     public static function getTotalPrice($products)
     {
         $productsInCart = self::getProducts();
@@ -65,12 +81,15 @@ class Cart
         return $total;
     }
 
+
+    // Очищение корзины
     public static function clear()
     {
         if (isset($_SESSION['products'])) {
             unset($_SESSION['products']);
         }
     }
+
 
     public static function deleteProduct($id)
     {

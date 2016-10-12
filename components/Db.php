@@ -1,5 +1,6 @@
 <?php
 
+// Подключение к базе данных
 class Db
 {
     public static function getConnection() {

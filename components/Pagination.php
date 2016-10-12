@@ -32,7 +32,6 @@ class Pagination
      * @param $total
      * @param $currentPage
      * @param $limit
-     * @param $index
      */
     public function __construct($total, $currentPage, $limit)
     {

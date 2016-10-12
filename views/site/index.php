@@ -26,32 +26,22 @@
     <!-- End Sidebar -->
     <!-- Content -->
     <div id="content">
-        <!-- Products -->
+
         <div class="products">
-            <h3>Добро пожаловать!</h3>
-            <?php foreach ($latestProducts as $product): ?>
-            <ul>
-                <li>
-                    <div class="product">
-                        <a href="#" class="info">
-								<span class="holder">
-									<img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
-									<span class="book-name"><?php echo $product['title']; ?></span>
-									<span class="author">by <?php echo $product['author']; ?> </span>
-									<span class="description"><?php echo $product['description']; ?></span>
-								</span>
-                        </a>
-                        <a href="#" data-id="<?php echo $product['id'];?>" class="buy-btn">BUY NOW <span class="price"><span class="low">$</span><span class="low"><?php echo $product['price']; ?></span></a>
-                    </div>
-                </li>
-            </ul>
-            <?php endforeach; ?>
-            <!-- End Products -->
+            <img style="width: 100%" src="/template/css/images/Welcome1.jpg">
+            <div>
+                <br>
+                <p style="text-indent: 1.5em; font-size: large; color: #1E90FF;"> Администрация BestSellers рада приветствовать Вас на страницах этого сайта!</p>
+            </div>
+            <br>
+            <p style="font-size: larger; font-family: 'Comic Sans MS', cursive;">Ищите и покупайте наши книги, не стестняйтесь консультироваться с нами, если возникают вопросы. Читайте книги и развивайтесь! </p>
         </div>
         <div class="cl">&nbsp;</div>
+
         <!-- Best-sellers -->
         <?php include ROOT.'/views/layouts/slider_bot.php'; ?>
         <!-- End Best-sellers -->
+
     </div>
     <!-- End Content -->
     <div class="cl">&nbsp;</div>

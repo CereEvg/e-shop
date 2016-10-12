@@ -19,7 +19,10 @@ class CatalogController
 
         $pagination = new Pagination($total, $page, Product::SHOW_BY_DEFAULT);
 
+        $sliderProducts = Slider::getSlider();
+
         require_once ROOT.'/views/category/index.php';
+        require_once ROOT.'/views/layouts/slider_top.php';
 
         return true;
     }
