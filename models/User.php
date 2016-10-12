@@ -2,6 +2,12 @@
 
 class User
 {
+    /**
+     * @param $name
+     * @param $email
+     * @param $password
+     * @return bool
+     */
     public static function register($name, $email, $password)
     {
         $db = Db::getConnection();
@@ -51,6 +57,10 @@ class User
     }
 
     // Email - проверка на отсутствие такого в базе
+    /**
+     * @param $email
+     * @return bool
+     */
     public static function checkEmailExists($email)
     {
         $db = Db::getConnection();
@@ -71,6 +81,11 @@ class User
         }
     }
 
+    /**
+     * @param $email
+     * @param $password
+     * @return bool
+     */
     public static function checkUserData($email, $password)
     {
         $db = Db::getConnection();
@@ -97,7 +112,6 @@ class User
         $_SESSION['user'] = $userId;
     }
 
-
     public static function checkLogged()
     {
 
@@ -110,7 +124,8 @@ class User
 
         return true;
     }
-    
+
+    // Если пользователь не авторизован
     public static function isGuest() 
     {
         if (isset($_SESSION['user'])) {
@@ -119,6 +134,10 @@ class User
         return true;
     }
 
+    /**
+     * @param $id
+     * @return bool|mysqli_result|mysqli_stmt
+     */
     public static function getUserById($id)
     {
         if ($id) {
@@ -134,7 +153,12 @@ class User
         }
     }
 
-
+    /**
+     * @param $id
+     * @param $name
+     * @param $password
+     * @return bool
+     */
     public static function edit($id, $name, $password)
     {
         $db = Db::getConnection();

@@ -4,6 +4,10 @@ class Product
 {
     const SHOW_BY_DEFAULT = 8;
 
+    /**
+     * @param int $count
+     * @return array
+     */
     public static function getLatestProducts($count = self::SHOW_BY_DEFAULT)
     {
         $count = intval($count);
@@ -31,6 +35,11 @@ class Product
         return $productsList;
     }
 
+    /**
+     * @param bool $categoryId
+     * @param $page
+     * @return array
+     */
     public static function getProductListByCategory($categoryId = false, $page)
     {
         if ($categoryId || $categoryId == 0)
@@ -63,6 +72,10 @@ class Product
         }
     }
 
+    /**
+     * @param $id
+     * @return array
+     */
     public static function getProductById($id)
     {
         // Соединение с БД
@@ -84,7 +97,10 @@ class Product
         return $result->fetch_assoc();
     }
 
-
+    /**
+     * @param $idsArray
+     * @return array
+     */
     public static function getProductsById($idsArray)
     {
         $products = array();
@@ -108,7 +124,10 @@ class Product
         return $products;
     }
 
-
+    /**
+     * @param $id
+     * @return string
+     */
     public static function getImage($id)
     {
         // Название изображения-пустышки
@@ -126,6 +145,9 @@ class Product
         return $path . $noImage;
     }
 
+    /**
+     * @return array
+     */
     public static function getRecommendedProducts()
     {
         $db = Db::getConnection();
@@ -148,6 +170,9 @@ class Product
         return $productsList;
     }
 
+    /**
+     * @return array
+     */
     public static function getProductsList()
     {
         // Соединение с БД
@@ -166,6 +191,10 @@ class Product
         return $productsList;
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public static function deleteProductById($id)
     {
         // Соединение с БД
@@ -178,6 +207,10 @@ class Product
         return $result->execute();
     }
 
+    /**
+     * @param $options
+     * @return int|mixed
+     */
     public static function createProduct($options)
     {
         // Соединение с БД
@@ -197,6 +230,11 @@ class Product
         return 0;
     }
 
+    /**
+     * @param $id
+     * @param $options
+     * @return bool
+     */
     public static function updateProductsById($id, $options)
     {
         $db = Db::getConnection();
@@ -209,6 +247,10 @@ class Product
         return $result->execute();
     }
 
+    /**
+     * @param $categoryId
+     * @return mixed
+     */
     public static function getTotalProductsInCategory($categoryId)
     {
         $db = Db::getConnection();

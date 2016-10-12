@@ -3,6 +3,9 @@
 
 class SiteController
 {
+    /**
+     * @return bool
+     */
     public function actionIndex() {
         
         $categories = Category::getCategoriesList();
@@ -19,6 +22,9 @@ class SiteController
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function actionContact()
     {
         $userEmail = '';

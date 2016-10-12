@@ -2,6 +2,9 @@
 
 class AdminProductController extends AdminBase
 {
+    /**
+     * @return bool
+     */
     public function actionIndex()
     {
         self::checkAdmin();
@@ -12,6 +15,10 @@ class AdminProductController extends AdminBase
         return true;
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function actionDelete($id)
     {
         self::checkAdmin();
@@ -28,6 +35,9 @@ class AdminProductController extends AdminBase
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function actionCreate()
     {
         // Проверка доступа
@@ -80,6 +90,10 @@ class AdminProductController extends AdminBase
         return true;
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function actionUpdate($id)
     {
         // Проверка доступа

@@ -2,6 +2,9 @@
 
 class UserController
 {
+    /**
+     * @return bool
+     */
     public function actionRegister()
     {
 
@@ -45,6 +48,9 @@ class UserController
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function actionLogin()
     {
         $email ='';
@@ -83,6 +89,7 @@ class UserController
 
         return true;
     }
+
 
     public function actionLogout()
     {

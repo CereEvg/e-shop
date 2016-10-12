@@ -3,6 +3,10 @@
 
 class CartController
 {
+    /**
+     * @param $id
+     * @return bool
+     */
     // Для асинхронного запроса
     public function actionAddAjax($id)
     {
@@ -11,6 +15,9 @@ class CartController
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function actionIndex()
     {
         $categories = array();
@@ -31,7 +38,9 @@ class CartController
         return true;
     }
 
-
+    /**
+     * @return bool
+     */
     public function actionCheckout()
     {
 
@@ -111,7 +120,7 @@ class CartController
                     // Оповещаем администратора о новом заказе по почте
                     $adminEmail = 'eshop.cere@gmail.com';
                     //$message = '<a href="http://digital-mafia.net/admin/orders">Список заказов</a>';
-                    $message = 'test';
+                    $message = 'Пользователь ' . $userName . ' совершил новую покупку';
                     $subject = 'Новый заказ!';
                     mail($adminEmail, $subject, $message);
 
@@ -126,6 +135,9 @@ class CartController
         return true;
     }
 
+    /**
+     * @param $id
+     */
     public function actionDelete($id)
     {
         Cart::deleteProduct($id);

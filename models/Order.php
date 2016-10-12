@@ -2,6 +2,14 @@
 
 class Order
 {
+    /**
+     * @param $userName
+     * @param $userPhone
+     * @param $userComment
+     * @param $userId
+     * @param $products
+     * @return bool
+     */
     public static function save($userName, $userPhone, $userComment, $userId, $products)
     {
         $db = Db::getConnection();
@@ -18,6 +26,9 @@ class Order
         return $result->execute();
     }
 
+    /**
+     * @return array
+     */
     public static function getOrdersList()
     {
         // Соединение с БД
@@ -42,7 +53,10 @@ class Order
         return $ordersList;
     }
 
-
+    /**
+     * @param $status
+     * @return string
+     */
     public static function getStatusText($status)
     {
         switch ($status) {
@@ -61,7 +75,10 @@ class Order
         }
     }
 
-
+    /**
+     * @param $id
+     * @return array
+     */
     public static function getOrderById($id)
     {
         // Соединение с БД
@@ -82,8 +99,10 @@ class Order
         return $result->fetch_assoc();
     }
 
-
-
+    /**
+     * @param $id
+     * @return bool
+     */
     public static function deleteOrderById($id)
     {
         // Соединение с БД
@@ -100,6 +119,15 @@ class Order
     }
 
 
+    /**
+     * @param $id
+     * @param $userName
+     * @param $userPhone
+     * @param $userComment
+     * @param $date
+     * @param $status
+     * @return bool
+     */
     public static function updateOrderById($id, $userName, $userPhone, $userComment, $date, $status)
     {
         // Соединение с БД

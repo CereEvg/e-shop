@@ -2,6 +2,9 @@
 
 class Slider
 {
+    /**
+     * @return array
+     */
     public static function getSlider()
     {
         $db = Db::getConnection();

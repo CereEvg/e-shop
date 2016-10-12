@@ -3,23 +3,28 @@
 //Хранит маршруты
 return array(
 
+    // Жанры
     'category/([0-9]+)' => 'catalog/category/$1',
 
+    // Действия пользователя
     'user/register' => 'user/register',
     'user/login' => 'user/login',
     'user/logout' => 'user/logout',
 
-
+    // Поиск
     'search' => 'search/result',
 
+    // Действия с корзиной покупок
     'cart/checkout' => 'cart/checkout',
     'cart/delete/([0-9]+)' => 'cart/delete/$1',
     'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1',
     'cart' => 'cart/index',
 
+    // Действия в личном кабинете
     'cabinet/edit' => 'cabinet/edit',
     'cabinet' => 'cabinet/index',
 
+    // Связь с администрацией
     'contacts' => 'site/contact',
 
     // Управление товарами
@@ -42,7 +47,8 @@ return array(
 
     // Админпанель
     'admin' => 'admin/index',
-    
+
+    // Главаня страница
     '' => 'site/index',
 
 );

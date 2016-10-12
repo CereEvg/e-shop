@@ -1,7 +1,10 @@
 <?php
 
-class Category {
-
+class Category
+{
+    /**
+     * @return array
+     */
     public static function getCategoriesList() {
         
         $db = Db::getConnection();
@@ -23,6 +26,9 @@ class Category {
         return $categoryList;
     }
 
+    /**
+     * @return array
+     */
     public static function getCategoriesListAdmin()
     {
         // Соединение с БД
@@ -41,6 +47,10 @@ class Category {
         return $categoryList;
     }
 
+    /**
+     * @param $id
+     * @return array
+     */
     public static function getCategoryById($id)
     {
         // Соединение с БД
@@ -62,6 +72,10 @@ class Category {
         return $result->fetch_assoc();
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public static function deleteCategoryById($id)
     {
         // Соединение с БД
@@ -74,7 +88,12 @@ class Category {
         return $result->execute();
     }
 
-
+    /**
+     * @param $id
+     * @param $name_category
+     * @param $sortOrder
+     * @return bool
+     */
     public static function updateCategoryById($id, $name_category, $sortOrder)
     {
         // Соединение с БД
@@ -89,10 +108,11 @@ class Category {
         return $result->execute();
     }
 
-
-
-
-
+    /**
+     * @param $name_category
+     * @param $sortOrder
+     * @return bool
+     */
     public static function createCategory($name_category, $sortOrder)
     {
         // Соединение с БД

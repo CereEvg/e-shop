@@ -1,8 +1,10 @@
 <?php
 
-
 class SearchController
 {
+    /**
+     * @return bool
+     */
     public function actionResult()
     {
         $title = '';

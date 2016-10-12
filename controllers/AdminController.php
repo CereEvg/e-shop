@@ -1,9 +1,11 @@
 <?php
 
-//use AdminBase;
 
 class AdminController extends AdminBase
 {
+    /**
+     * @return bool
+     */
     public function actionIndex()
     {
 

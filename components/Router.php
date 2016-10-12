@@ -1,5 +1,6 @@
 <?php
 
+
 class Router
 {
     //Массив, в котором будут храниться маршруты
@@ -17,6 +18,7 @@ class Router
             return trim($_SERVER['REQUEST_URI'], '/');
         }
     }
+
 
     //Анализ запроса и передача управления от front controller'a
     public function run() {

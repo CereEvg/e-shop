@@ -3,6 +3,10 @@
 
 class CatalogController
 {
+    /**
+     * @param $categoryId
+     * @return bool
+     */
     public function actionCategory ($categoryId)
     {
         $page = ( isset($_GET['page']) ) ? intval($_GET['page']) : 1;

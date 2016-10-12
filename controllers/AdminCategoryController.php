@@ -1,7 +1,11 @@
 <?php
 
+
 class AdminCategoryController extends AdminBase
 {
+    /**
+     * @return bool
+     */
     public function actionIndex()
     {
         $categoriesList = Category::getCategoriesListAdmin();
@@ -10,6 +14,9 @@ class AdminCategoryController extends AdminBase
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function actionCreate()
     {
         // Проверка доступа
@@ -41,6 +48,10 @@ class AdminCategoryController extends AdminBase
         return true;
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function actionUpdate($id)
     {
         // Проверка доступа
@@ -63,6 +74,10 @@ class AdminCategoryController extends AdminBase
         return true;
     }
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function actionDelete($id)
     {
         // Проверка доступа

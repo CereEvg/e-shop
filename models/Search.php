@@ -2,11 +2,14 @@
 
 class Search
 {
-
     public function __construct()
     {
     }
 
+    /**
+     * @param $title
+     * @return array
+     */
     public static function search($title)
     {
         $db = Db::getConnection();

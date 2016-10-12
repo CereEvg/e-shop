@@ -2,6 +2,9 @@
 
 class CabinetController
 {
+    /**
+     * @return bool
+     */
     public function actionIndex()
     {
 
@@ -13,6 +16,9 @@ class CabinetController
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function actionEdit()
     {
         // Получаем id юзера из сессии

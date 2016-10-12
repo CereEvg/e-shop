@@ -3,8 +3,12 @@
 
 class AdminOrderController extends AdminBase
 {
+    /**
+     * @return bool
+     */
     public function actionIndex()
     {
+
         // Проверка доступа
         self::checkAdmin();
 
@@ -17,6 +21,10 @@ class AdminOrderController extends AdminBase
     }
 
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function actionUpdate($id)
     {
         // Проверка доступа
@@ -45,6 +53,10 @@ class AdminOrderController extends AdminBase
     }
 
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function actionView($id)
     {
         // Проверка доступа
@@ -63,6 +75,10 @@ class AdminOrderController extends AdminBase
     }
 
 
+    /**
+     * @param $id
+     * @return bool
+     */
     public function actionDelete($id)
     {
         // Проверка доступа
